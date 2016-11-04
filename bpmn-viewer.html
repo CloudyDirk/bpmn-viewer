@@ -1,0 +1,56 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`bpmn-viewer`
+Display a BPMN2 model
+
+@demo demo/index.html
+-->
+
+<dom-module id="bpmn-viewer">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <div id="jscanvas"></div>
+  </template>
+
+  <script src="../jquery/dist/jquery.js"></script>
+  <script src="../bpmn-js/dist/bpmn-navigated-viewer.js"></script>
+  <script>
+    Polymer({
+
+      is: 'bpmn-viewer',
+
+      ready: function() {
+           // access a local DOM element by ID using this.$
+           var BpmnViewer = window.BpmnJS;
+           var viewer = new BpmnViewer({ container: this.$.jscanvas, height: 800 });
+           var url = this.src;
+
+           $.ajax(url, { dataType : 'text' }).done(function(xml) {
+
+             viewer.importXML(xml, function(err) {
+
+               if (err) {
+                 console.error(err);
+               } else {
+                 viewer.get('canvas').zoom('fit-viewport');
+               }
+             });
+           });
+
+         },
+      properties: {
+        src: {
+          type: String,
+          value: 'bpmn-viewer',
+        },
+      },
+
+    });
+
+  </script>
+</dom-module>
