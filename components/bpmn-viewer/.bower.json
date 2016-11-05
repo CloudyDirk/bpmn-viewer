@@ -1,0 +1,27 @@
+{
+  "name": "bpmn-viewer",
+  "description": "Displays a BPMN2 model",
+  "main": "bpmn-viewer.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "bpmn-js": "^0.17.2",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "homepage": "https://github.com/CloudyDirk/bpmn-viewer",
+  "_release": "5218f1ac84",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5218f1ac84ec0ba1994cc603d95547c416ee51fd"
+  },
+  "_source": "git://github.com/CloudyDirk/bpmn-viewer.git",
+  "_target": "master",
+  "_originalSource": "CloudyDirk/bpmn-viewer",
+  "_direct": true
+}
