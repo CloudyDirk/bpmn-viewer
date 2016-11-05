@@ -27,7 +27,15 @@ Display a BPMN2 model
       ready: function() {
            // access a local DOM element by ID using this.$
            var BpmnViewer = window.BpmnJS;
-           var viewer = new BpmnViewer({ container: this.$.jscanvas });
+           var height = this.offsetHeight
+           if (this.style != null) {
+             height = this.style.height;
+           }
+           var width = this.offsetWidth
+           if (this.style != null) {
+             width = this.style.width;
+           }
+           var viewer = new BpmnViewer({ container: this.$.jscanvas, height: height, width: width });
            var url = this.src;
 
            $.ajax(url, { dataType : 'text' }).done(function(xml) {
