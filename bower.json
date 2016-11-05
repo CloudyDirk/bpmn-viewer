@@ -1,5 +1,5 @@
 {
-  "name": "polymer-bpmn-viewer",
+  "name": "bpmn-viewer",
   "description": "Displays a BPMN2 model",
   "main": "bpmn-viewer.html",
   "dependencies": {
