@@ -2,7 +2,7 @@
 
 <!--
 `bpmn-viewer`
-Display a BPMN2 model
+Displays a BPMN2 model
 
 @demo demo/index.html
 -->
@@ -24,7 +24,7 @@ Display a BPMN2 model
 
       is: 'bpmn-viewer',
 
-      ready: function() {
+      attached: function() {
            // access a local DOM element by ID using this.$
            var BpmnViewer = window.BpmnJS;
            var height = this.offsetHeight
